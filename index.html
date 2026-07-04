@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clodesen JT - 静态网站搭建教程</title>
+    <title>Clodesen - 访问密码获取教程</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="header-content">
-            <h1>Clodesen JT 静态网站搭建教程</h1>
-            <p class="subtitle">从零开始，手把手教你创建 GitHub Pages 静态网站</p>
+            <h1>Clodesen 访问密码获取教程</h1>
+            <p class="subtitle">安全获取和使用访问密码的完整指南</p>
         </div>
     </header>
 
@@ -20,11 +20,11 @@
             <nav class="module-nav">
                 <h3>教程目录</h3>
                 <ul>
-                    <li><a href="#step1" class="active">Step 1: 前期准备</a></li>
-                    <li><a href="#step2">Step 2: 创建仓库</a></li>
-                    <li><a href="#step3">Step 3: 配置 Pages</a></li>
-                    <li><a href="#step4">Step 4: 编写代码</a></li>
-                    <li><a href="#step5">Step 5: 部署上线</a></li>
+                    <li><a href="#step1" class="active">Step 1: 了解密码类型</a></li>
+                    <li><a href="#step2">Step 2: 获取访问密码</a></li>
+                    <li><a href="#step3">Step 3: 首次登录</a></li>
+                    <li><a href="#step4">Step 4: 密码安全设置</a></li>
+                    <li><a href="#step5">Step 5: 密码管理与恢复</a></li>
                 </ul>
             </nav>
 
@@ -34,36 +34,36 @@
                 <section id="step1" class="module">
                     <div class="module-header">
                         <span class="step-number">01</span>
-                        <h2>前期准备</h2>
+                        <h2>了解密码类型</h2>
                     </div>
                     <div class="module-body">
-                        <p>在开始之前，你需要准备以下内容：</p>
+                        <p>首先了解 Clodesen 系统中使用的密码类型：</p>
                         <div class="checklist">
                             <div class="check-item">
                                 <span class="check-icon">✓</span>
                                 <div>
-                                    <strong>GitHub 账号</strong>
-                                    <p>访问 <a href="https://github.com" target="_blank">github.com</a> 注册一个免费账号</p>
+                                    <strong>访问密码</strong>
+                                    <p>用于登录系统的主要凭证，需要妥善保管</p>
                                 </div>
                             </div>
                             <div class="check-item">
                                 <span class="check-icon">✓</span>
                                 <div>
-                                    <strong>代码编辑器</strong>
-                                    <p>推荐使用 VS Code、Sublime Text 或其他你喜欢的编辑器</p>
+                                    <strong>临时密码</strong>
+                                    <p>系统自动生成的一次性密码，用于首次登录或密码重置</p>
                                 </div>
                             </div>
                             <div class="check-item">
                                 <span class="check-icon">✓</span>
                                 <div>
-                                    <strong>基础 HTML/CSS 知识</strong>
-                                    <p>了解基本的网页结构和样式设置</p>
+                                    <strong>API 密钥</strong>
+                                    <p>用于程序化访问的密钥，具有特定权限范围</p>
                                 </div>
                             </div>
                         </div>
                         <div class="tip-box">
                             <span class="tip-icon">💡</span>
-                            <p><strong>提示：</strong>GitHub Pages 是免费的静态网站托管服务，非常适合个人博客、项目文档和作品集展示。</p>
+                            <p><strong>提示：</strong>不同类型的密码有不同的安全级别和使用场景，请根据实际需求选择合适的密码类型。</p>
                         </div>
                     </div>
                 </section>
@@ -72,34 +72,40 @@
                 <section id="step2" class="module">
                     <div class="module-header">
                         <span class="step-number">02</span>
-                        <h2>创建仓库</h2>
+                        <h2>获取访问密码</h2>
                     </div>
                     <div class="module-body">
-                        <p>登录 GitHub 后，创建一个新的代码仓库：</p>
+                        <p>通过以下方式获取访问密码：</p>
                         <div class="steps-list">
                             <div class="step-item">
                                 <span class="step-num">1</span>
-                                <p>点击右上角 <strong>[+]</strong> 按钮，选择 <strong>[New repository]</strong></p>
+                                <p>访问 Clodesen 官方网站或管理后台</p>
                             </div>
                             <div class="step-item">
                                 <span class="step-num">2</span>
-                                <p>输入仓库名称，选择 <strong>Public</strong>（公开）权限</p>
+                                <p>在登录页面点击 <strong>[忘记密码]</strong> 或 <strong>[获取密码]</strong></p>
                             </div>
                             <div class="step-item">
                                 <span class="step-num">3</span>
-                                <p>勾选 <strong>[Add a README file]</strong> 选项</p>
+                                <p>输入注册时使用的邮箱地址</p>
                             </div>
                             <div class="step-item">
                                 <span class="step-num">4</span>
-                                <p>点击 <strong>Create repository</strong> 完成创建</p>
+                                <p>检查邮箱，获取系统发送的密码信息</p>
                             </div>
                         </div>
                         <div class="code-block">
                             <div class="code-header">
-                                <span>仓库命名规则</span>
+                                <span>密码邮件示例</span>
                             </div>
-                            <pre><code>个人主页模式: 用户名.github.io
-项目子站模式: 任意名称（如 my-project）</code></pre>
+                            <pre><code>主题: Clodesen 访问密码
+
+您的访问密码已重置：
+用户名: your_username
+临时密码: abc123XYZ
+有效期: 24小时
+
+请登录后立即修改密码。</code></pre>
                         </div>
                     </div>
                 </section>
@@ -108,35 +114,31 @@
                 <section id="step3" class="module">
                     <div class="module-header">
                         <span class="step-number">03</span>
-                        <h2>配置 GitHub Pages</h2>
+                        <h2>首次登录</h2>
                     </div>
                     <div class="module-body">
-                        <p>在仓库中启用 GitHub Pages 功能：</p>
+                        <p>使用获取的密码进行首次登录：</p>
                         <div class="steps-list">
                             <div class="step-item">
                                 <span class="step-num">1</span>
-                                <p>进入仓库页面，点击 <strong>[Settings]</strong>（设置）</p>
+                                <p>打开 Clodesen 登录页面</p>
                             </div>
                             <div class="step-item">
                                 <span class="step-num">2</span>
-                                <p>在左侧菜单找到 <strong>[Pages]</strong> 选项</p>
+                                <p>输入用户名和临时密码</p>
                             </div>
                             <div class="step-item">
                                 <span class="step-num">3</span>
-                                <p>在 <strong>Source</strong> 部分选择 <strong>Deploy from a branch</strong></p>
+                                <p>系统会提示你修改密码</p>
                             </div>
                             <div class="step-item">
                                 <span class="step-num">4</span>
-                                <p>选择 <strong>main</strong> 分支，目录选择 <strong>/ (root)</strong></p>
-                            </div>
-                            <div class="step-item">
-                                <span class="step-num">5</span>
-                                <p>点击 <strong>Save</strong> 保存设置</p>
+                                <p>设置新的强密码并确认</p>
                             </div>
                         </div>
                         <div class="info-box">
                             <span class="info-icon">ℹ️</span>
-                            <p><strong>说明：</strong>配置完成后，GitHub 会自动为你生成一个访问链接，格式为：<code>https://用户名.github.io/仓库名/</code></p>
+                            <p><strong>安全提示：</strong>首次登录后请立即修改密码，临时密码将在24小时后失效。</p>
                         </div>
                     </div>
                 </section>
@@ -145,37 +147,41 @@
                 <section id="step4" class="module">
                     <div class="module-header">
                         <span class="step-number">04</span>
-                        <h2>编写网站代码</h2>
+                        <h2>密码安全设置</h2>
                     </div>
                     <div class="module-body">
-                        <p>创建你的第一个静态网页文件：</p>
-                        <div class="file-structure">
-                            <h4>📁 项目结构</h4>
-                            <pre><code>your-repo/
-├── index.html      ← 首页（必须）
-├── style.css       ← 样式文件
-├── script.js       ← 脚本文件
-└── docs/           ← 文档目录（可选）
-    ├── page1.html
-    └── page2.html</code></pre>
-                        </div>
+                        <p>设置强密码并启用安全功能：</p>
                         <div class="code-block">
                             <div class="code-header">
-                                <span>index.html 示例</span>
-                                <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                                <span>强密码要求</span>
                             </div>
-                            <pre><code>&lt;!DOCTYPE html&gt;
-&lt;html lang="zh-CN"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;我的静态网站&lt;/title&gt;
-    &lt;link rel="stylesheet" href="style.css"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;欢迎来到我的网站&lt;/h1&gt;
-    &lt;p&gt;这是我的第一个 GitHub Pages 网站&lt;/p&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                            <pre><code>密码长度: 至少12位字符
+必须包含:
+  ✓ 大写字母 (A-Z)
+  ✓ 小写字母 (a-z)
+  ✓ 数字 (0-9)
+  ✓ 特殊字符 (!@#$%^&*)
+
+避免使用:
+  ✗ 个人信息（生日、姓名）
+  ✗ 常见词汇（password、123456）
+  ✗ 连续字符（abcdef、123456）</code></pre>
+                        </div>
+                        <div class="checklist">
+                            <div class="check-item">
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>启用双因素认证</strong>
+                                    <p>在账户设置中开启 2FA，增加安全层级</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>定期更换密码</strong>
+                                    <p>建议每3个月更换一次密码</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -184,47 +190,42 @@
                 <section id="step5" class="module">
                     <div class="module-header">
                         <span class="step-number">05</span>
-                        <h2>部署上线</h2>
+                        <h2>密码管理与恢复</h2>
                     </div>
                     <div class="module-body">
-                        <p>将代码推送到 GitHub，网站将自动部署：</p>
+                        <p>妥善管理密码并了解恢复流程：</p>
                         <div class="code-block">
                             <div class="code-header">
-                                <span>Git 命令</span>
+                                <span>密码管理建议</span>
                             </div>
-                            <pre><code># 初始化本地仓库
-git init
+                            <pre><code>推荐密码管理器:
+  • 1Password
+  • LastPass
+  • Bitwarden
 
-# 添加所有文件
-git add .
-
-# 提交更改
-git commit -m "初始化网站"
-
-# 关联远程仓库
-git remote add origin https://github.com/用户名/仓库名.git
-
-# 推送到 GitHub
-git push -u origin main</code></pre>
+密码存储原则:
+  ✓ 使用加密的密码管理器
+  ✓ 不要在多个网站使用相同密码
+  ✓ 不要将密码写在不安全的地方
+  ✓ 定期备份重要凭证</code></pre>
                         </div>
                         <div class="success-box">
                             <span class="success-icon">🎉</span>
-                            <p><strong>完成！</strong>等待几分钟后，访问你的网站：<br>
-                            <code>https://用户名.github.io/仓库名/</code></p>
+                            <p><strong>完成！</strong>你已了解如何安全获取和管理 Clodesen 访问密码。如有问题，请联系技术支持。</p>
                         </div>
                         <div class="checklist">
                             <div class="check-item">
                                 <span class="check-icon">✓</span>
                                 <div>
-                                    <strong>访问测试</strong>
-                                    <p>打开浏览器，输入你的网站地址，检查是否正常显示</p>
+                                    <strong>保存恢复信息</strong>
+                                    <p>保存好密码重置链接和备份邮箱</p>
                                 </div>
                             </div>
                             <div class="check-item">
                                 <span class="check-icon">✓</span>
                                 <div>
-                                    <strong>移动端适配</strong>
-                                    <p>使用手机访问，确保网站在移动设备上也能正常显示</p>
+                                    <strong>联系支持</strong>
+                                    <p>遇到问题时及时联系技术支持团队</p>
                                 </div>
                             </div>
                         </div>
