@@ -5,73 +5,332 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    background: #f5f7fa;
 }
 
+/* Header */
 header {
-    background: #2c3e50;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: white;
-    padding: 20px;
-    border-radius: 8px;
-    margin-bottom: 30px;
+    padding: 40px 20px;
+    text-align: center;
 }
 
-header h1 {
-    margin-bottom: 15px;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin-right: 20px;
-    padding: 5px 10px;
-    border-radius: 4px;
-    transition: background 0.3s;
-}
-
-nav a:hover {
-    background: #34495e;
-}
-
-section {
-    margin-bottom: 30px;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 8px;
-}
-
-h2 {
-    color: #2c3e50;
-    margin-bottom: 15px;
-}
-
-ul {
-    list-style: none;
-    padding-left: 20px;
-}
-
-li {
+.header-content h1 {
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
-a {
-    color: #3498db;
+.subtitle {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Main Container */
+.tutorial-container {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+}
+
+/* Module Navigation */
+.module-nav {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.module-nav h3 {
+    color: #667eea;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.module-nav ul {
+    list-style: none;
+}
+
+.module-nav li {
+    margin-bottom: 8px;
+}
+
+.module-nav a {
+    display: block;
+    padding: 10px 15px;
+    color: #555;
     text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    font-size: 0.9rem;
 }
 
-a:hover {
-    text-decoration: underline;
+.module-nav a:hover,
+.module-nav a.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
 }
 
+/* Tutorial Content */
+.tutorial-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Module Styles */
+.module {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+.module-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px 25px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-number {
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.module-header h2 {
+    font-size: 1.4rem;
+}
+
+.module-body {
+    padding: 25px;
+}
+
+.module-body p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* Checklist */
+.checklist {
+    margin: 20px 0;
+}
+
+.check-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.check-item:last-child {
+    border-bottom: none;
+}
+
+.check-icon {
+    width: 24px;
+    height: 24px;
+    background: #10b981;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    flex-shrink: 0;
+}
+
+.check-item strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #333;
+}
+
+.check-item p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Steps List */
+.steps-list {
+    margin: 20px 0;
+}
+
+.step-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.step-num {
+    width: 28px;
+    height: 28px;
+    background: #667eea;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.85rem;
+    flex-shrink: 0;
+}
+
+.step-item p {
+    margin: 0;
+    padding-top: 3px;
+}
+
+/* Code Block */
+.code-block {
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.code-header {
+    background: #1e293b;
+    color: #94a3b8;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copy-btn {
+    background: #334155;
+    color: #94a3b8;
+    border: none;
+    padding: 4px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+}
+
+.copy-btn:hover {
+    background: #475569;
+    color: white;
+}
+
+.code-block pre {
+    background: #0f172a;
+    padding: 20px;
+    overflow-x: auto;
+}
+
+.code-block code {
+    color: #e2e8f0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* File Structure */
+.file-structure {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.file-structure h4 {
+    margin-bottom: 10px;
+    color: #334155;
+}
+
+.file-structure pre {
+    background: #1e293b;
+    padding: 15px;
+    border-radius: 6px;
+    overflow-x: auto;
+}
+
+.file-structure code {
+    color: #94a3b8;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.85rem;
+}
+
+/* Info/Tip/Success Boxes */
+.tip-box,
+.info-box,
+.success-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.tip-box {
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+}
+
+.info-box {
+    background: #dbeafe;
+    border: 1px solid #93c5fd;
+}
+
+.success-box {
+    background: #d1fae5;
+    border: 1px solid #6ee7b7;
+}
+
+.tip-icon,
+.info-icon,
+.success-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.tip-box p,
+.info-box p,
+.success-box p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Footer */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
     color: #666;
+    background: white;
+    margin-top: 40px;
     border-top: 1px solid #eee;
-    margin-top: 30px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .tutorial-container {
+        grid-template-columns: 1fr;
+    }
+
+    .module-nav {
+        position: static;
+    }
+
+    .header-content h1 {
+        font-size: 1.8rem;
+    }
 }

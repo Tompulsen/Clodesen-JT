@@ -3,35 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clodesen JT - 代码文档</title>
+    <title>Clodesen JT - 静态网站搭建教程</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Clodesen JT 代码文档</h1>
-        <nav>
-            <a href="#home">首页</a>
-            <a href="#docs">文档</a>
-            <a href="#about">关于</a>
-        </nav>
+        <div class="header-content">
+            <h1>Clodesen JT 静态网站搭建教程</h1>
+            <p class="subtitle">从零开始，手把手教你创建 GitHub Pages 静态网站</p>
+        </div>
     </header>
+
     <main>
-        <section id="home">
-            <h2>欢迎</h2>
-            <p>这是一个静态代码文档网站，使用 GitHub Pages 托管。</p>
-        </section>
-        <section id="docs">
-            <h2>文档目录</h2>
-            <ul>
-                <li><a href="docs/getting-started.html">快速开始</a></li>
-                <li><a href="docs/api-reference.html">API 参考</a></li>
-                <li><a href="docs/examples.html">示例代码</a></li>
-            </ul>
-        </section>
+        <div class="tutorial-container">
+            <!-- 模块导航 -->
+            <nav class="module-nav">
+                <h3>教程目录</h3>
+                <ul>
+                    <li><a href="#step1" class="active">Step 1: 前期准备</a></li>
+                    <li><a href="#step2">Step 2: 创建仓库</a></li>
+                    <li><a href="#step3">Step 3: 配置 Pages</a></li>
+                    <li><a href="#step4">Step 4: 编写代码</a></li>
+                    <li><a href="#step5">Step 5: 部署上线</a></li>
+                </ul>
+            </nav>
+
+            <!-- 教程内容 -->
+            <div class="tutorial-content">
+                <!-- Step 1 -->
+                <section id="step1" class="module">
+                    <div class="module-header">
+                        <span class="step-number">01</span>
+                        <h2>前期准备</h2>
+                    </div>
+                    <div class="module-body">
+                        <p>在开始之前，你需要准备以下内容：</p>
+                        <div class="checklist">
+                            <div class="check-item">
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>GitHub 账号</strong>
+                                    <p>访问 <a href="https://github.com" target="_blank">github.com</a> 注册一个免费账号</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>代码编辑器</strong>
+                                    <p>推荐使用 VS Code、Sublime Text 或其他你喜欢的编辑器</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>基础 HTML/CSS 知识</strong>
+                                    <p>了解基本的网页结构和样式设置</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tip-box">
+                            <span class="tip-icon">💡</span>
+                            <p><strong>提示：</strong>GitHub Pages 是免费的静态网站托管服务，非常适合个人博客、项目文档和作品集展示。</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 2 -->
+                <section id="step2" class="module">
+                    <div class="module-header">
+                        <span class="step-number">02</span>
+                        <h2>创建仓库</h2>
+                    </div>
+                    <div class="module-body">
+                        <p>登录 GitHub 后，创建一个新的代码仓库：</p>
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <span class="step-num">1</span>
+                                <p>点击右上角 <strong>[+]</strong> 按钮，选择 <strong>[New repository]</strong></p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-num">2</span>
+                                <p>输入仓库名称，选择 <strong>Public</strong>（公开）权限</p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-num">3</span>
+                                <p>勾选 <strong>[Add a README file]</strong> 选项</p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-num">4</span>
+                                <p>点击 <strong>Create repository</strong> 完成创建</p>
+                            </div>
+                        </div>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>仓库命名规则</span>
+                            </div>
+                            <pre><code>个人主页模式: 用户名.github.io
+项目子站模式: 任意名称（如 my-project）</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 3 -->
+                <section id="step3" class="module">
+                    <div class="module-header">
+                        <span class="step-number">03</span>
+                        <h2>配置 GitHub Pages</h2>
+                    </div>
+                    <div class="module-body">
+                        <p>在仓库中启用 GitHub Pages 功能：</p>
+                        <div class="steps-list">
+                            <div class="step-item">
+                                <span class="step-num">1</span>
+                                <p>进入仓库页面，点击 <strong>[Settings]</strong>（设置）</p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-num">2</span>
+                                <p>在左侧菜单找到 <strong>[Pages]</strong> 选项</p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-num">3</span>
+                                <p>在 <strong>Source</strong> 部分选择 <strong>Deploy from a branch</strong></p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-num">4</span>
+                                <p>选择 <strong>main</strong> 分支，目录选择 <strong>/ (root)</strong></p>
+                            </div>
+                            <div class="step-item">
+                                <span class="step-num">5</span>
+                                <p>点击 <strong>Save</strong> 保存设置</p>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <span class="info-icon">ℹ️</span>
+                            <p><strong>说明：</strong>配置完成后，GitHub 会自动为你生成一个访问链接，格式为：<code>https://用户名.github.io/仓库名/</code></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 4 -->
+                <section id="step4" class="module">
+                    <div class="module-header">
+                        <span class="step-number">04</span>
+                        <h2>编写网站代码</h2>
+                    </div>
+                    <div class="module-body">
+                        <p>创建你的第一个静态网页文件：</p>
+                        <div class="file-structure">
+                            <h4>📁 项目结构</h4>
+                            <pre><code>your-repo/
+├── index.html      ← 首页（必须）
+├── style.css       ← 样式文件
+├── script.js       ← 脚本文件
+└── docs/           ← 文档目录（可选）
+    ├── page1.html
+    └── page2.html</code></pre>
+                        </div>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>index.html 示例</span>
+                                <button class="copy-btn" onclick="copyCode(this)">复制</button>
+                            </div>
+                            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;我的静态网站&lt;/title&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;欢迎来到我的网站&lt;/h1&gt;
+    &lt;p&gt;这是我的第一个 GitHub Pages 网站&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Step 5 -->
+                <section id="step5" class="module">
+                    <div class="module-header">
+                        <span class="step-number">05</span>
+                        <h2>部署上线</h2>
+                    </div>
+                    <div class="module-body">
+                        <p>将代码推送到 GitHub，网站将自动部署：</p>
+                        <div class="code-block">
+                            <div class="code-header">
+                                <span>Git 命令</span>
+                            </div>
+                            <pre><code># 初始化本地仓库
+git init
+
+# 添加所有文件
+git add .
+
+# 提交更改
+git commit -m "初始化网站"
+
+# 关联远程仓库
+git remote add origin https://github.com/用户名/仓库名.git
+
+# 推送到 GitHub
+git push -u origin main</code></pre>
+                        </div>
+                        <div class="success-box">
+                            <span class="success-icon">🎉</span>
+                            <p><strong>完成！</strong>等待几分钟后，访问你的网站：<br>
+                            <code>https://用户名.github.io/仓库名/</code></p>
+                        </div>
+                        <div class="checklist">
+                            <div class="check-item">
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>访问测试</strong>
+                                    <p>打开浏览器，输入你的网站地址，检查是否正常显示</p>
+                                </div>
+                            </div>
+                            <div class="check-item">
+                                <span class="check-icon">✓</span>
+                                <div>
+                                    <strong>移动端适配</strong>
+                                    <p>使用手机访问，确保网站在移动设备上也能正常显示</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
     </main>
+
     <footer>
         <p>&copy; 2026 Clodesen JT. All rights reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
