@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>示例代码 - Clodesen JT</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header>
+        <h1>示例代码</h1>
+        <nav>
+            <a href="../index.html">首页</a>
+            <a href="getting-started.html">快速开始</a>
+            <a href="api-reference.html">API 参考</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>基础示例</h2>
+            <pre><code>// 创建一个简单的应用
+const app = new Clodesen({
+    debug: true,
+    port: 8080
+});
+
+app.init();
+app.start();</code></pre>
+        </section>
+        <section>
+            <h2>高级配置</h2>
+            <pre><code>// 自定义中间件
+app.use((req, res, next) => {
+    console.log('请求时间:', new Date());
+    next();
+});
+
+// 路由配置
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});</code></pre>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Clodesen JT. All rights reserved.</p>
+    </footer>
+</body>
+</html>
