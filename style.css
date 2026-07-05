@@ -356,9 +356,9 @@ footer {
 /* Tutorial Steps */
 .tutorial-steps {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    padding: 25px;
 }
 
 .tutorial-step {
@@ -367,17 +367,22 @@ footer {
 
 .tutorial-step img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    height: auto;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    transition: transform 0.3s;
+}
+
+.tutorial-step img:hover {
+    transform: scale(1.02);
 }
 
 .tutorial-step p {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #555;
     margin: 0;
+    font-weight: 500;
 }
 
 /* Responsive */
