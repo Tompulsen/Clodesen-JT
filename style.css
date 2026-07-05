@@ -31,53 +31,9 @@ header {
 
 /* Main Container */
 .tutorial-container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 30px auto;
     padding: 0 20px;
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    gap: 30px;
-}
-
-/* Module Navigation */
-.module-nav {
-    background: white;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-    height: fit-content;
-    position: sticky;
-    top: 20px;
-}
-
-.module-nav h3 {
-    color: #667eea;
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.module-nav ul {
-    list-style: none;
-}
-
-.module-nav li {
-    margin-bottom: 8px;
-}
-
-.module-nav a {
-    display: block;
-    padding: 10px 15px;
-    color: #555;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.3s;
-    font-size: 0.9rem;
-}
-
-.module-nav a:hover,
-.module-nav a.active {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
 }
 
 /* Tutorial Content */
@@ -419,14 +375,6 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .tutorial-container {
-        grid-template-columns: 1fr;
-    }
-
-    .module-nav {
-        position: static;
-    }
-
     .header-content h1 {
         font-size: 1.8rem;
     }

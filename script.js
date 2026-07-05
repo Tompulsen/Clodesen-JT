@@ -1,45 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 平滑滚动
-    const navLinks = document.querySelectorAll('.module-nav a');
-    
-    navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                
-                // 更新导航状态
-                navLinks.forEach(l => l.classList.remove('active'));
-                this.classList.add('active');
-            }
-        });
-    });
-
-    // 滚动时高亮当前模块
-    const modules = document.querySelectorAll('.module');
-    
-    window.addEventListener('scroll', function() {
-        let current = '';
-        
-        modules.forEach(module => {
-            const moduleTop = module.offsetTop;
-            const moduleHeight = module.clientHeight;
-            
-            if (pageYOffset >= moduleTop - 200) {
-                current = module.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === '#' + current) {
-                link.classList.add('active');
-            }
-        });
-    });
+    // 折叠功能
 });
 
 // 复制代码功能
