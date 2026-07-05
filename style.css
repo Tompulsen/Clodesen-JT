@@ -105,6 +105,17 @@ header {
     box-shadow: 0 4px 15px rgba(0,0,0,0.15);
 }
 
+.module-images {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.module-images img {
+    width: 100%;
+    height: auto;
+}
+
 @media (max-width: 768px) {
     .module-content {
         flex-direction: column;
