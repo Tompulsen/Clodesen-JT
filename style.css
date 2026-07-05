@@ -32,7 +32,7 @@ header {
 
 /* Main Container */
 .tutorial-container {
-    max-width: 100%;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -52,18 +52,6 @@ header {
     overflow: hidden;
     box-shadow: 0 4px 20px rgba(0,0,0,0.1);
     margin-bottom: 25px;
-}
-
-/* 整体流程模块全宽 */
-.module:first-child {
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* 详细步骤模块只占一半 */
-.module:not(:first-child) {
-    max-width: 50%;
 }
 
 .module-header {
@@ -99,16 +87,17 @@ header {
 /* Module Content Layout */
 .module-content {
     display: flex;
-    gap: 20px;
+    gap: 30px;
     align-items: flex-start;
 }
 
 .module-text {
     flex: 1;
+    min-width: 0;
 }
 
 .module-image {
-    flex: 0 0 280px;
+    flex: 0 0 320px;
 }
 
 .module-image img {
@@ -120,7 +109,7 @@ header {
 
 .module-images-row {
     display: flex;
-    gap: 10px;
+    gap: 12px;
 }
 
 .module-images-row img {
@@ -293,12 +282,6 @@ footer {
 }
 
 /* Responsive - 手机端适配 */
-@media (max-width: 1024px) {
-    .module:not(:first-child) {
-        max-width: 70%;
-    }
-}
-
 @media (max-width: 768px) {
     .header-content h1 {
         font-size: 1.6rem;
@@ -308,8 +291,8 @@ footer {
         font-size: 0.95rem;
     }
     
-    .module:not(:first-child) {
-        max-width: 100%;
+    .tutorial-container {
+        padding: 0 15px;
     }
     
     .module-content {
