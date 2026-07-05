@@ -83,6 +83,39 @@ header {
     font-size: 1.05rem;
 }
 
+/* Module Content Layout */
+.module-content {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.module-text {
+    flex: 1;
+}
+
+.module-image {
+    flex: 0 0 350px;
+}
+
+.module-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 768px) {
+    .module-content {
+        flex-direction: column;
+    }
+    
+    .module-image {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
 /* Checklist */
 .checklist {
     margin: 20px 0;
@@ -307,93 +340,18 @@ footer {
     box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
 }
 
-/* Collapsible Section */
-.collapsible-section {
-    margin: 25px 0;
-    border: 1px solid #e2e8f0;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.collapsible-btn {
-    width: 100%;
-    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-    border: none;
-    padding: 18px 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    font-size: 1.05rem;
-    font-weight: 500;
-    color: #334155;
-    transition: background 0.3s;
-}
-
-.collapsible-btn:hover {
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-}
-
-.collapsible-btn .arrow {
-    transition: transform 0.3s;
-}
-
-.collapsible-btn.active .arrow {
-    transform: rotate(180deg);
-}
-
-.collapsible-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background: white;
-}
-
-.collapsible-content.active {
-    max-height: 1000px;
-}
-
-/* Tutorial Steps */
-.tutorial-steps {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 25px;
-    padding: 25px;
-}
-
-.tutorial-step {
-    text-align: center;
-    max-width: 400px;
-}
-
-.tutorial-step img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    transition: transform 0.3s;
-}
-
-.tutorial-step img:hover {
-    transform: scale(1.02);
-}
-
-.tutorial-step p {
-    font-size: 0.95rem;
-    color: #555;
-    margin: 0;
-    font-weight: 500;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
     .header-content h1 {
         font-size: 1.8rem;
     }
 
-    .tutorial-steps {
-        grid-template-columns: repeat(2, 1fr);
+    .module-content {
+        flex-direction: column;
+    }
+    
+    .module-image {
+        flex: 0 0 auto;
+        width: 100%;
     }
 }

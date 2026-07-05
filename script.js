@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 折叠功能
+    // 页面加载完成
 });
 
 // 复制代码功能
@@ -21,22 +21,4 @@ function copyCode(button) {
     }).catch(err => {
         console.error('复制失败:', err);
     });
-}
-
-// 折叠功能
-function toggleCollapsible(button) {
-    const content = button.nextElementSibling;
-    const isActive = button.classList.contains('active');
-    
-    // 切换按钮状态
-    button.classList.toggle('active');
-    
-    // 切换内容显示
-    if (isActive) {
-        content.style.maxHeight = null;
-        content.classList.remove('active');
-    } else {
-        content.style.maxHeight = content.scrollHeight + 'px';
-        content.classList.add('active');
-    }
 }
