@@ -249,7 +249,9 @@ header {
 /* Password Input Section */
 .password-input-section {
     margin: 25px 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .password-btn {
