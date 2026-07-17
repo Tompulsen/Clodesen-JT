@@ -1,24 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // 页面加载完成
-});
+    const typewriterElement = document.getElementById('typewriter-text');
+    const text = '提示：建议手机端打开保存的音频文件！（听音频内容）音频中所提示的密码就是今天的访问密码！';
+    let index = 0;
+    let isDeleting = false;
+    let pauseTime = 2000;
 
-// 复制代码功能
-function copyCode(button) {
-    const codeBlock = button.closest('.code-block');
-    const code = codeBlock.querySelector('code').innerText;
-    
-    navigator.clipboard.writeText(code).then(() => {
-        const originalText = button.textContent;
-        button.textContent = '已复制';
-        button.style.background = '#10b981';
-        button.style.color = 'white';
-        
-        setTimeout(() => {
-            button.textContent = originalText;
-            button.style.background = '';
-            button.style.color = '';
-        }, 2000);
-    }).catch(err => {
-        console.error('复制失败:', err);
-    });
-}
+    function typeWriter() {
+        const currentText = text.substring(0, index);
+        typewriterElement.textContent = currentText;
+
+        if (!isDeleting && index < text.length) {
+            index++;
+            setTimeout(typeWriter, 80 + Math.random() * 40);
+        } else if (!isDeleting && index === text.length) {
+            isDeleting = true;
+            setTimeout(typeWriter, pauseTime);
+        } else if (isDeleting && index > 0) {
+            index--;
+            setTimeout(typeWriter, 30);
+        } else {
+            isDeleting = false;
+            setTimeout(typeWriter, 500);
+        }
+    }
+
+    typeWriter();
+});
